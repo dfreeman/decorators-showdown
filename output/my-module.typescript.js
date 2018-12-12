@@ -4,40 +4,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-function myDecorator() {
-    var params = [];
-    for (var _i = 0; _i < arguments.length; _i++) {
-        params[_i] = arguments[_i];
-    }
-}
-var MyClass = /** @class */ (function () {
-    function MyClass() {
+function myDecorator(...params) { }
+class MyClass {
+    constructor() {
         this.field1 = true;
         this.field2 = false;
     }
-    MyClass.prototype.methodA = function () {
+    methodA() {
         return 'ok';
-    };
-    MyClass.prototype.methodB = function () {
+    }
+    methodB() {
         return -1;
-    };
-    MyClass.prototype.methodC = function () {
+    }
+    methodC() {
         return null;
-    };
-    __decorate([
-        myDecorator
-    ], MyClass.prototype, "field1");
-    __decorate([
-        myDecorator
-    ], MyClass.prototype, "field2");
-    __decorate([
-        myDecorator
-    ], MyClass.prototype, "methodA");
-    __decorate([
-        myDecorator
-    ], MyClass.prototype, "methodB");
-    __decorate([
-        myDecorator
-    ], MyClass.prototype, "methodC");
-    return MyClass;
-}());
+    }
+}
+__decorate([
+    myDecorator
+], MyClass.prototype, "field1", void 0);
+__decorate([
+    myDecorator
+], MyClass.prototype, "field2", void 0);
+__decorate([
+    myDecorator
+], MyClass.prototype, "methodA", null);
+__decorate([
+    myDecorator
+], MyClass.prototype, "methodB", null);
+__decorate([
+    myDecorator
+], MyClass.prototype, "methodC", null);

@@ -28,6 +28,7 @@ for (let file of fs.readdirSync('input')) {
   fs.writeFileSync(`output/${file.replace('.js', '.babel7.js')}`, babel7result.code);
 
   let tsResult = ts.transpile(fs.readFileSync(`input/${file}`, 'utf-8'), {
+    target: 'esnext',
     experimentalDecorators: true
   });
 

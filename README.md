@@ -12,6 +12,6 @@ For the [`my-module`](input/my-module.js) file committed in the `input` director
 | -- | -- | -- | -- |
 | Babel 6 | 75 | 2482 | [resulting output](output/my-module.babel6.js)
 | Babel 7 | 115 | 12330 | [resulting output](output/my-module.babel7.js)
-| TypeScript | 43 | 1464 | [resulting output](output/my-module.typescript.js)
+| TypeScript | 37 | 1183 | [resulting output](output/my-module.typescript.js)
 
 It's worth noting that this isn't necessarily an apples-to-apples comparison, as Babel 6 and TypeScript are both targeting Stage 1 of the decorators spec, while Babel 7 is targeting Stage 2.
